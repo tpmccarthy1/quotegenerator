@@ -1,0 +1,52 @@
+html,
+body,
+.container-table {
+  height: 100%;
+  transition: all 2s ease-in-out;
+}
+
+.container-table {
+  display: table;
+}
+
+.vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#quote {
+  border-radius: 10px;
+  /*   box-shadow: 7px 6px 10px 0px rgba(50, 50, 50, 0.75); */
+  padding: 20px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  background: #fff;
+}
+
+.buttons {
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+#new-quote {
+  float: right;
+  border: none;
+}
+
+#new-quote:hover {
+  opacity: .5;
+  transition: all .5s ease-in-out;
+}
+
+.quote-author {
+  font-style: italic;
+}
+
+#tweet {
+  float: left;
+}
+
+#tweet:hover {
+  opacity: .5;
+  transition: all .5s ease-in-out;
+}
