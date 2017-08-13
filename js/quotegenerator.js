@@ -15,18 +15,18 @@ function ranCol(id, id2) { //function name
 var currentQuote = '',
     currentAuthor = '';
 
-//Request random quote from API, assign the key to variables, display content on DOM 
 
 function getQuote() {
   $.ajax({
     headers: {
-      "X-Mashape-Key": "DyHpKn35aPmshImOA0PBkzpKrstbp1k7BcXjsnOvCITSRjIl39",
-      Accept: "application/json",
+      "X-Mashape-Key": "dbohmiAivCmsh0lAZnjcEk1gZVzrp1QiAHnjsn88mpxlBVOg9U",
+      "X-Mashape-Host": "andruxnet-random-famous-quotes.p.mashape.com",
       "Content-Type": "application/x-www-form-urlencoded"
     },
-    url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
+    url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous&count=1',
     success: function(response) {
-      var r = JSON.parse(response);
+      console.log(response);
+      var r = response;
       currentQuote = r.quote;
       currentAuthor = r.author; {
         $('#tweet').attr('href', 'https://twitter.com/intent/tweet?  hashtags=quotes&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
